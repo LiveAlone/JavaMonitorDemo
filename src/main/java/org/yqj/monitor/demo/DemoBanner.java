@@ -1,4 +1,4 @@
-package org.yqj.boot.demo;
+package org.yqj.monitor.demo;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.ansi.AnsiColor;
@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 import java.io.PrintStream;
 
 /**
- * Created by yaoqijun.
+ * Created by yaoqijun.s
  * Date:2016-04-27
  * Email:yaoqj@terminus.io
  * Descirbe:
