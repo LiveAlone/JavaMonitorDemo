@@ -20,17 +20,12 @@ import java.util.Map;
  */
 @SpringBootApplication
 @Controller
-public class BootDemoApplication extends SpringBootServletInitializer{
+public class BootDemoApplication{
     public static void main(String[] args) {
         new SpringApplicationBuilder()
                 .banner(new DemoBanner())
                 .sources(BootDemoApplication.class)
                 .run(args);
-    }
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(BootDemoApplication.class);
     }
 
     @RequestMapping(value = "/index", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -50,6 +45,10 @@ public class BootDemoApplication extends SpringBootServletInitializer{
         System.out.println("HelloController.helloJsp().hello=" + hello);
         map.put("hello", hello);
         return "helloJsp";
+    }
 
+    @RequestMapping("/menu")
+    public String menuJsp(Map<String, Object> map){
+        return "menu";
     }
 }
